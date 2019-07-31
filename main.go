@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("start")
-	fmt.Println("add test")
+	fmt.Println("add push test")
 	//hello
 	http.HandleFunc("/hello", hello)
 	//health
