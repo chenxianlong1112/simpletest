@@ -8,14 +8,15 @@ import (
 
 func main() {
 	fmt.Println("start")
+	fmt.Println("add test")
 	//hello
 	http.HandleFunc("/hello", hello)
 	//health
 	http.HandleFunc("/health", health)
+	//test
+	http.HandleFunc("/test", test)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
-	close := make(chan bool)
-	<-close
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
@@ -24,4 +25,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func health(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "healthy")
+}
+
+func test(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "test")
 }
