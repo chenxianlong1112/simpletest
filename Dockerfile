@@ -6,7 +6,7 @@
 # ADD . ${basedir}
 # RUN go build -o app
 
-FROM alpine:3.8
+FROM debian:9.9
 # for https
 # RUN apk add --no-cache ca-certificates
 # Finally we copy the statically compiled Go binary.
