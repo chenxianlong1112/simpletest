@@ -11,5 +11,5 @@ FROM alpine:3.8
 # RUN apk add --no-cache ca-certificates
 # Finally we copy the statically compiled Go binary.
 # COPY --from=builder /go/build/app /app
-COPY target/test /opt/test
+COPY target/test /opt/
 ENTRYPOINT ["/opt/test"]
